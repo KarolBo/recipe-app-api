@@ -1,7 +1,7 @@
 FROM python:3.9-alpine3.13
 LABEL mainteiner="karolbo1@o2.pl"
 
-ENV PYTHONBUFFERED 1
+ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
@@ -27,6 +27,6 @@ RUN python -m venv /py && \
     django-user
 
 # no needed withoun venv
-ENV PATH="/py/bin:$PATH" 
+ENV PATH="/py/bin:$PATH"
 
 USER django-user
