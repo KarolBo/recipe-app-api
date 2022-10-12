@@ -9,7 +9,6 @@ from user.serializers import (
     UserSerializer,
     AuthTokenSerializer
 )
-from core.models import User 
 
 
 class CreateUserView(generics.CreateAPIView):
